@@ -70,7 +70,7 @@ contract MetaPhase is Monarchy {
 
         phases.push(_phase);
 
-        emit CreatedProfile(_address, address(_phase), username);
+        emit CreatedProfile(_address, address(_phase), username); //ZORA API to query 
     }
 
     /*///////////////////////////////////////////////////////////////
@@ -96,7 +96,7 @@ contract MetaPhase is Monarchy {
 
         _phase.mint(follower, metadata);
 
-        emit Follow(follower, following, address(_phase));
+        emit Follow(follower, following, address(_phase)); //ZORA API 
     }
 
     function unfollow (address unfollower, address unfollowing) public onlyKing {
@@ -106,7 +106,7 @@ contract MetaPhase is Monarchy {
 
         _phase.burn(unfollower);
 
-        emit Unfollow(unfollower, unfollowing, address(_phase));
+        emit Unfollow(unfollower, unfollowing, address(_phase)); //ZORA API 
     }
 
 
